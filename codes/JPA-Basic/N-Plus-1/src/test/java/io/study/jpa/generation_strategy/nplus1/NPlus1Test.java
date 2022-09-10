@@ -50,13 +50,11 @@ public class NPlus1Test {
 		Employee fire2 = new Employee("소방관2", fireDept);
 		Employee gdragon = new Employee("지드래곤", singer);
 		Employee uiJo = new Employee("황의조", soccerPlayer);
-		Employee stacey = new Employee("stacey", developer);
 
 		em.persist(fire1);
 		em.persist(fire2);
 		em.persist(gdragon);
 		em.persist(uiJo);
-		em.persist(stacey);
 
 		em.flush();
 	}
@@ -71,6 +69,7 @@ public class NPlus1Test {
 			String deptName = e.getDept().getDeptName();
 			System.out.println(e.getName() + "의 소속부서 : " + deptName);
 		}
+		System.out.println();
 	}
 
 	@Test
